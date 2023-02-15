@@ -1,38 +1,29 @@
-name: Build & Deploy
+name: Deploy into production server
 
- on:
+on:
   push:
-    branches: [ master ]
- jobs:
-  build:
+    branches:
+    - master
+
+jobs:
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Hugo Setup
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.87.0'
-
-    - name: Hugo Build
-      run: hugo
-
-    - name: prepare .ssh dir
-      run: mkdir -p .ssh && chmod 700 .ssh
-
-    - name: ssh key generate
-      run: echo "$WING_SSH_KEY" > .ssh/id_rsa && chmod 600 .ssh/id_rsa
-      env:
-        WING_SSH_KEY: ${{ secrets.WING_SSH_KEY }}
-
-    - name: deploy to Conoha WING with rsync
-      run: rsync -rlptgoD -O --delete --exclude ".git/" --exclude ".ssh/" -e "ssh -i .ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${WING_SSH_PORT}" ./public/ ${WING_SSH_USER}@${WING_SSH_HOST}:${WING_SSH_DIR}
-      env:
-        WING_SSH_PORT: ${{ secrets.WING_SSH_PORT }}
-        WING_SSH_USER: ${{ secrets.WING_SSH_USER }}
-        WING_SSH_HOST: ${{ secrets.WING_SSH_HOST }}
-        WING_SSH_DIR:  ~/public_html/netwest.site
+      - uses: actions/checkout@v2
+      - name: prepare .ssh dir
+        run: mkdir -p .ssh && chmod 700 .ssh
+      - name: ssh key generate
+        run: echo "$SSH_KEY" > .ssh/id_rsa && chmod 600 .ssh/id_rsa
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+      - name: Cache yarn packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys:
+            ${{ runner.os }}-yarn-
+      - name: install packages
+        run: yarn install
+      - name: build
+        run: yarn build
