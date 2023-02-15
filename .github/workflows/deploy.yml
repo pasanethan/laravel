@@ -25,7 +25,7 @@ jobs:
           with:
             switches: -avz --delete
             path: dist/
-            remote_path: ${{ secrets.home/c2265621/public_html/netwest.site }}
+            remote_path: ${{ secrets.~/home/c2265621/public_html/netwest.site }}
             remote_host: ${{ secrets.www115.conoha.ne.jp }}
             remote_user: ${{ secrets.c2265621 }}
             remote_port: ${{ secrets.8022 }}
