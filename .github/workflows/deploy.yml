@@ -19,7 +19,7 @@ jobs:
         - name: ssh key generate
           run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
           env:
-            SSH_PRIVATE_KEY: ${{ secrets.ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzlJkU/K52xZDIYqZHeTJLajPuXvBsawZYmFpHYLPfS99svNTN0e3d86PXkv3B5oKNqWwQFvlfLiajA11LE0i3nYJKIxPd/iEUnXO4D/R0tDSOT7d3y4XWfOCXwmoxDbh75jfAz42xMHZovuPO9r/b4DlWMZYx1gB3yFV7ol4SbcBVOuAcwvZYKPCVPlaKKnKk0LOsW1OaW1ESi2RkpzRgSrN3wbSjzTcgXX5e9Z1+JbQlSEl9hDI+5BkajR9ltC2sT+l8d1wBHSdPZU60YBH8p5tO9BRbtOVGLj5buna6s0U/f8CaFIgc6X1DmFY5R6H24xcRxbc7tQgVQIoQO6LD  }}
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         - name: rsync deployments
           uses: burnett01/rsync-deployments@5.1
           with:
