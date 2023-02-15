@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: 
       - name: prepare .ssh dir
         run: mkdir -p .ssh && chmod 700 .ssh
       - name: ssh key generate
