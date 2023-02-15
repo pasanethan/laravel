@@ -27,4 +27,3 @@ jobs:
         run: yarn install
       - name: build
         run: yarn build
-      ...
