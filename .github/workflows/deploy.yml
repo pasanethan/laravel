@@ -25,8 +25,8 @@ jobs:
           with:
             switches: -avz --delete
             path: dist/
-            remote_path: ${{ secrets.home/c2265621/public_html/netwest.site }}
-            remote_host: ${{ secrets.www115.conoha.ne.jp }}
-            remote_user: ${{ secrets.c2265621 }}
-            remote_port: ${{ secrets.8022 }}
-            remote_key: ${{ secrets.ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzlJkU/K52xZDIYqZHeTJLajPuXvBsawZYmFpHYLPfS99svNTN0e3d86PXkv3B5oKNqWwQFvlfLiajA11LE0i3nYJKIxPd/iEUnXO4D/R0tDSOT7d3y4XWfOCXwmoxDbh75jfAz42xMHZovuPO9r/b4DlWMZYx1gB3yFV7ol4SbcBVOuAcwvZYKPCVPlaKKnKk0LOsW1OaW1ESi2RkpzRgSrN3wbSjzTcgXX5e9Z1+JbQlSEl9hDI+5BkajR9ltC2sT+l8d1wBHSdPZU60YBH8p5tO9BRbtOVGLj5buna6s0U/f8CaFIgc6X1DmFY5R6H24xcRxbc7tQgVQIoQO6LD  }}
+           remote_path: ${{ secrets.REMOTE_PATH }}
+remote_host: ${{ secrets.REMOTE_HOST }}
+remote_user: ${{ secrets.REMOTE_USER }}
+remote_port: ${{ secrets.REMOTE_PORT }}
+remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
