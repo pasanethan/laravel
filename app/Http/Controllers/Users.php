@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class Users extends Controller
 {
-  function getData(Request $req)
+  function passRequest(Request $req)
    {
 
     $data = [

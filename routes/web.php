@@ -32,7 +32,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::view("login", "users");
-// Route::method_name("users", [Users::class, 'getData']
+ Route::method_name("users", [Users::class, 'passRequest']);
 
 
 
