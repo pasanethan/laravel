@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class Users extends Controller
 {
-  function loadview()
+  function getData()
    {
-    $data=['anil','per', 'anif'];
-    return view('users', ['user'=> $data]);
+    return "hello";
    }
 }

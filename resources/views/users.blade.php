@@ -1,13 +1,8 @@
+<h1> Login </h1>
+<form action="Users" method="POST">
 
+<input type="text"  name="username"><br><br>
+<input type="password"  name="password">
+<button type="submit">Login</button>
 
-{{URL::previous()}}
-
-<x-header  data="user DDDD" />
-
-<a href="/home">Home</a>
-
-
-@foreach ($user as $item)
-<h4>{{$item}}</h4>
-@endforeach
-
+</form>

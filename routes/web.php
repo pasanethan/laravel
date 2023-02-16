@@ -24,7 +24,12 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/users', [Users::class, 'loadview']
+Route::post('/users', [Users::class, 'getData']
 );
 
+Route::view("login")
+
 Route::view("/about", "about" );
+
+
+youtube.com/watch?v=A-PCuzCTLWU&list=PL8p2I9GklV47Jszga434vZxOmY74Q1N_K&index=17
