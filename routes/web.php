@@ -24,12 +24,18 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::post('/users', [Users::class, 'getData']
-);
+// Route::post("/users", [Users::class, 'getData']
+// );
 
-Route::view("login")
+Route::get('/', function (Request $request) {
+    //
+});
 
-Route::view("/about", "about" );
+Route::view("login", "users");
+// Route::method_name("users", [Users::class, 'getData']
 
 
-youtube.com/watch?v=A-PCuzCTLWU&list=PL8p2I9GklV47Jszga434vZxOmY74Q1N_K&index=17
+
+
+
+
