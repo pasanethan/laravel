@@ -10,9 +10,9 @@ class Users extends Controller
    {
 
     $data = [
-      'name' => $request->input('name'),
-      'email' => $request->input('email'),
-      'where' =>$request->input('where')
+      'name' => $req->input('name'),
+      'email' => $req->input('email'),
+      'where' =>$req->input('where')
   ];
 
     $req->validate([
@@ -27,8 +27,8 @@ class Users extends Controller
 [
     'required' => ':attributeはご入力必須です。',
     'email' => ':attributeはメール形式である必要があります。',
-    'max' => ':attributeは3文字以上で7文字以内でご入力してください',
-    'min' => ':attributeは3文字以上で7文字以内でご入力してください'
+    'max' => ':attributeは3文字以上と7文字以内でご入力してください',
+    'min' => ':attributeは3文字以上と7文字以内でご入力してください'
    
 ],
 [
@@ -36,12 +36,10 @@ class Users extends Controller
     'email' => 'メールアドレス',
     'where' => '都道府県',
 ]);
+ 
 
-
-
-    return view('user-confirm', $data);
-   }
-
-
+    // return $req->input();
+    return view('users-confirm', $data);
+}
 
 }
