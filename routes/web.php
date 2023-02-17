@@ -15,27 +15,41 @@ use App\Http\Controllers\Users;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 // Route::post("/users", [Users::class, 'getData']
 // );
 
-Route::get('/', function (Request $request) {
-    //
-});
+// Route::get('/', function (Request $request) {
+//     //
+// });
 
-Route::view("login", "users");
- Route::POST("users", [Users::class, 'passRequest']);
+Route::view("home", "lesson1/users");
+ Route::POST("confirm", [Users::class, 'passRequest']);
+ Route::POST("end ", [Users::class, 'outRequest']);
+ Route::POST("lesson1/end ", [Users::class, 'outRequest']);
+ Route::POST("lesson1/confirm", [Users::class, 'passRequest']);
+//  Route::view("lesson1/profile", "profile");
+Route::view("back", "lesson1/users");
+Route::view("lesson1/back", "lesson1/users");
+ 
+//  Route::post('logout', function () {
+//   if(session()->has('name'))
+//   {
+//   session()->pull('name');
+//     return redirect('users');
+//   }
 
 
-
-
+//  });
+ 
+ 
 
 

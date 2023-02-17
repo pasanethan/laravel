@@ -1,11 +1,11 @@
 <h1> 登録画面 </h1>
 
 
-<form action="users" method="POST">
+<form action="end" method="post">
 @csrf
 
 <label for="name">名前 :</label>{{$name}}
-<input type="hidden" name="name"><br>
+<input type="hidden" name="name" value="<?= $name; ?>"><br>
 
 
 <label for="email">メールアドレス :</label>{{$email}}

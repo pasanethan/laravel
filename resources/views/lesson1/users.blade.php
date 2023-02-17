@@ -1,7 +1,7 @@
 <h1> 登録画面 </h1>
 
 
-<form action="users" method="POST">
+<form action="confirm" method="POST">
 @csrf
 
 <label for="name">名前 :</label>
