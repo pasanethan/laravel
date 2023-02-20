@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
-
+use App\Http\Controllers\CompanyCRUDController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,7 +49,8 @@ Route::view("lesson1/back", "lesson1/users");
 
 
 //  });
- 
+
+Route::resource('companies', CompanyCRUDController::class);
  
 
 
