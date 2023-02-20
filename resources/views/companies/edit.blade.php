@@ -13,7 +13,7 @@
 <h5>編集画面</h2>
 </div>
 <div class="pull-right">
-<a class="btn btn-primary" href="{{ route('companies.index') }}" enctype="multipart/form-data"> 戻る</a>
+<a class="btn btn-primary" href="{{ route('companies.index') }}"> 戻る</a>
 </div>
 </div>
 </div>
