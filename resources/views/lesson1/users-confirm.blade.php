@@ -1,7 +1,7 @@
 <h1> 登録画面 </h1>
 
 
-<form action="/mail/send" method="get">
+<form action="/mail/send" method="post">
 @csrf
 
 <label for="name">名前 :</label>{{$name}}
