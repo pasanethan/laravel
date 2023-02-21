@@ -26,10 +26,10 @@ $data = [
 ];
 
 
-  dd($data);
 
-        // Mail::send(new TestMail($name, $email,$where));
-        // return view('welcome');
+
+        Mail::send(new TestMail($name, $email,$where));
+        return view('welcome');
     }
 }
  
