@@ -9,12 +9,12 @@ use App\Mail\TestMail;
 
 class MailController extends Controller
 {
-    public function send(Request $req)
+    public function send(Request $request)
     {
         $data = [
-            'name' => $req->input('name'),
-            'email' => $req->input('email'),
-            'where' =>$req->input('where')
+            'name' => $request('name'),
+            'email' => $request('email'),
+            'where' =>$request('where')
         ];
         
 
