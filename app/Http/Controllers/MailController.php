@@ -11,12 +11,9 @@ class MailController extends Controller
 {
     public function send(Request $request)
     {
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'where' =>$request->where
-        ];
-        
+        $name = 'テスト ユーザー';
+        $email = 'mahesuru.pasan@ethan-tech.jp';
+        $where='hi';
 
         Mail::send(new TestMail($name, $email,$where));
         return view('welcome');
