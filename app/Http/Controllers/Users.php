@@ -57,21 +57,8 @@ class Users extends Controller
 
 
 // }
-}
-
-class MailController extends Controller
-{
-  
-
 
   
-//   $data = [
-//     'name' => $req->input('name'),
-//     'email' => $req->input('email'),
-//     'where' =>$req->input('where')
-// ];
-
-
     public function send(Request $req)
     {
         // $name = 'テスト ユーザー';
