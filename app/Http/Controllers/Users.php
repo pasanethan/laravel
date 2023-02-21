@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\TestMail;
 
 class Users extends Controller
 {
@@ -34,24 +37,54 @@ class Users extends Controller
    return view('lesson1/users-confirm', $data);
 }
 
-function outRequest(Request $req)
-   {
-    $data = [
-      'name' => $req->input('name')];
-$req->session()->put('name', $data['name']);
-//var_dump($data);
-return view('lesson1/profile');
-}
-
-function clearRequest()
-{
-//   //session()->pull('name');
-//   return view('users');
+// function outRequest(Request $req)
+//    {
+//     $data = [
+//       'name' => $req->input('name')];
+// $req->session()->put('name', $data['name']);
+// //var_dump($data);
+// return view('lesson1/profile');
 // }
 
-   session()->pull('name');
-  return view('lesson1/users');
+// function clearRequest()
+// {
+// //   //session()->pull('name');
+// //   return view('users');
+// // }
+
+//    session()->pull('name');
+//   return view('lesson1/users');
 
 
+// }
 }
+
+class MailController extends Controller
+{
+  
+
+
+  
+//   $data = [
+//     'name' => $req->input('name'),
+//     'email' => $req->input('email'),
+//     'where' =>$req->input('where')
+// ];
+
+
+    public function send(Request $request)
+    {
+        // $name = 'テスト ユーザー';
+        // $email = 'test@example.com';
+
+          $data = [
+    'name' => $req->input('name'),
+    'email' => $req->input('email'),
+    'where' =>$req->input('where')
+];
+
+        Mail::send(new TestMail($name, $email,$where));
+
+        return view('welcome');
+    }
 }

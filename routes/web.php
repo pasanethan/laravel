@@ -33,8 +33,8 @@ use App\Http\Controllers\CompanyCRUDController;
 
 Route::view("home", "lesson1/users");
  Route::POST("confirm", [Users::class, 'passRequest']);
- Route::POST("end ", [Users::class, 'outRequest']);
- Route::POST("lesson1/end ", [Users::class, 'outRequest']);
+//  Route::POST("end ", [Users::class, 'outRequest']);
+//  Route::POST("lesson1/end ", [Users::class, 'outRequest']);
  Route::POST("lesson1/confirm", [Users::class, 'passRequest']);
 //  Route::view("lesson1/profile", "profile");
 Route::view("back", "lesson1/users");
@@ -51,6 +51,6 @@ Route::view("lesson1/back", "lesson1/users");
 //  });
 
 Route::resource('companies', CompanyCRUDController::class);
- 
+Route::get('/mail/send', 'Users@send');
 
 
