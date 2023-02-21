@@ -19,13 +19,10 @@ class MailController extends Controller
 //   $data['email'] = $request->email;
 //   $data['where'] = $request->where;
 
-$data = [
-    'name' => $request->input('name'),
-    'email' => $request->input('email'),
-    'where' =>$request->input('where')
-];
 
-
+    $name = $request->name;
+    $email = $request->email;
+    $where = $request->where;
 
 
         Mail::send(new TestMail($name, $email,$where));
