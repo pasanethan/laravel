@@ -72,7 +72,7 @@ class MailController extends Controller
 // ];
 
 
-    public function send(Request $request)
+    public function send(Request $req)
     {
         // $name = 'テスト ユーザー';
         // $email = 'test@example.com';
