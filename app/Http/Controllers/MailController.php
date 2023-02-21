@@ -26,7 +26,7 @@ class MailController extends Controller
 
 
         Mail::send(new TestMail($name, $email,$where));
-        return view('lesson1/profile', $name);
+        return view('lesson1/profile');
     }
 }
  
