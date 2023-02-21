@@ -5,14 +5,14 @@
 @csrf
 
 <label for="name">名前 :</label>{{$name}}
-<input type="hidden" name="name" value="<?= $name; ?>"><br>
+<input type="hidden" name="name" value="{{$name}}"><br>
 
 
 <label for="email">メールアドレス :</label>{{$email}}
-<input type="hidden"  name="email" value="<?= $email; ?>"><br>
+<input type="hidden"  name="email" value="{{$email}}"><br>
 
 <label for="where">都道府県  :</label>{{$where}}
-<input type="hidden"  name="where" value="<?= $where; ?>"><br>
+<input type="hidden"  name="where" value="{{$where}}"><br>
 
 <button type="submit">確認</button>
 

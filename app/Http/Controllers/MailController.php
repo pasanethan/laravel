@@ -11,18 +11,25 @@ class MailController extends Controller
 {
     public function send(Request $request)
     {
-  // 配列の初期化
-  $data = array();
+//   // 配列の初期化
+//   $data = array();
 
-  // データ格納
-  $data['name'] = $request->name;
-  $data['email'] = $request->email;
-  $data['where'] = $request->where;
+//   // データ格納
+//   $data['name'] = $request->name;
+//   $data['email'] = $request->email;
+//   $data['where'] = $request->where;
 
-  
+$data = [
+    'name' => $request->input('name'),
+    'email' => $request->input('email'),
+    'where' =>$request->input('where')
+];
 
-        Mail::send(new TestMail($name, $email,$where));
-        return view('welcome');
+
+  dd($data);
+
+        // Mail::send(new TestMail($name, $email,$where));
+        // return view('welcome');
     }
 }
  
