@@ -18,7 +18,7 @@
   <p> メールを送信しました。<br>
 メールボックスをご確認の上、再度お問い合わせ頂きますようお願い申し上げます </p>
 <div>
-  <button href="back" class="btn btn-primary">戻る</button>
+  <a href="back" class="btn btn-primary">戻る</a>
 </div>
 
 </form>
