@@ -24,8 +24,17 @@ class MailController extends Controller
     $where = $request->where;
 
 
+    if($request->input('back') == 'back'){
+        return redirect('public/home')
+                    ->withInput();}
+else{
         Mail::send(new TestMail($name, $email,$where));
         return view('lesson1/profile');
+    
+       
+         }
+    
+    
     }
 
     public function companysend(Request $request)
@@ -47,12 +56,7 @@ class MailController extends Controller
         return view('lesson1/profile');
     }
 
-    function again()
-
-{
-    return redirect('/public/home')
-                ->withInput();
- }
+    
 
 }
  
