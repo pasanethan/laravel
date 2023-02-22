@@ -19,7 +19,6 @@ class MailController extends Controller
 //   $data['email'] = $request->email;
 //   $data['where'] = $request->where;
 
-
     $name = $request->name;
     $email = $request->email;
     $where = $request->where;
