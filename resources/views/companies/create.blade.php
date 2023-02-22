@@ -28,7 +28,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>お名前:</strong>
-<input type="text" name="name" class="form-control" placeholder="お名前を入力してください">
+<input type="text" name="name" class="form-control" placeholder="お名前を入力してください" value="{{ old('name') }}">
 @error('name')
 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
 @enderror
@@ -37,7 +37,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>メールアドレス:</strong>
-<input type="text" name="email" class="form-control" placeholder="受信可能なメールアドレスを入力してください">
+<input type="text" name="email" class="form-control" placeholder="受信可能なメールアドレスを入力してください" value="{{ old('email') }}">
 @error('email')
 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
 @enderror
@@ -46,7 +46,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>都道府県:</strong>
-<input type="text" name="address" class="form-control" placeholder="お住まいの都道府県を入力してください">
+<input type="text" name="address" class="form-control" placeholder="お住まいの都道府県を入力してください" value="{{ old('address') }}">
 @error('address')
 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
 @enderror

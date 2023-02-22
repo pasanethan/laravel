@@ -47,6 +47,13 @@ class MailController extends Controller
         return view('lesson1/profile');
     }
 
+    function again()
+
+{
+    return redirect('/public/home')
+                ->withInput();
+ }
+
 }
  
  

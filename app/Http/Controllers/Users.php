@@ -15,15 +15,15 @@ class Users extends Controller
   ];
 
     $req->validate([
-    'name' => 'required|max:7|min:3',
+    'name' => 'required|max:7|min:2',
     'email' => 'required|email',
-    'where' => 'required|max:7|min:3'
+    'where' => 'required|max:7|min:2'
 ],
 [
     'required' => ':attributeはご入力必須です。',
     'email' => ':attributeはメール形式である必要があります。',
-    'max' => ':attributeは3文字以上と7文字以内でご入力してください',
-    'min' => ':attributeは3文字以上と7文字以内でご入力してください'
+    'max' => ':attributeは2文字以上と7文字以内でご入力してください',
+    'min' => ':attributeは2文字以上と7文字以内でご入力してください'
 ],
 [
     'name' => '名前',
@@ -54,5 +54,6 @@ class Users extends Controller
 
 
 // }
+
 
 }
