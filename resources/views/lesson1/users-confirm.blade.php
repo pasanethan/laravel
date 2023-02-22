@@ -1,19 +1,45 @@
-<h1> 登録画面 </h1>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethan Technology Japan</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+</head>
+<body>
+<div class="container mt-2">
+<div class="row">
+<div class="col-lg-12 margin-tb">
+<div class="pull-left mb-2">
+<h3>Ethan Technology Japan</h3>
+</div>
+<div class="pull-right">
+<p style="margin-bottom:20px"> 下記の項目をご確認の上、送信してください。</p>
+</div>
+</div>
+</div>
 
 <form action="/mail/send" method="post">
 @csrf
-
-<label for="name">名前 :</label>{{$name}}
+<div class="form-group" style="margin-bottom: 0">
+<label for="name">名前 : </label>{{$name}}
 <input type="hidden" name="name" value="{{$name}}"><br>
+</div>
 
-
-<label for="email">メールアドレス :</label>{{$email}}
+<div class="form-group" style="margin-bottom: 0">
+<label for="email">メールアドレス : </label>{{$email}}
 <input type="hidden"  name="email" value="{{$email}}"><br>
+</div>
 
-<label for="where">都道府県  :</label>{{$where}}
+<div class="form-group">
+<label for="where">都道府県  : </label>{{$where}}
 <input type="hidden"  name="where" value="{{$where}}"><br>
+</div>
 
-<button type="submit">確認</button>
-
+<div class="form-group" style="margin-bottom: 0">
+<button type="submit" class="btn btn-primary">確認</button>
+</div>
 </form>
+</div>
+</form>
+</body>
+</html>
