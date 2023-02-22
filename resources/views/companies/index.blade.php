@@ -15,7 +15,9 @@
 </div>
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
-<a class="btn btn-success" href="{{ route('companies.create') }}"> 送信</a>
+<form action="{{ route('companies.mail',$company->id) }}" method="Post">
+<button type="submit" class="btn btn-danger" name="sendall">削除</button>
+</form>
 </div>
 </div>
 </div>
@@ -34,7 +36,7 @@
 </tr>
 @foreach ($companies as $company)
 <tr>
-<td><input type="checkbox" id="{{ $company->id }}"></td>
+<td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>

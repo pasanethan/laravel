@@ -17,14 +17,7 @@
 </div>
 </div>
 </div>
-<!-- <form action="edit" method="post">
-@csrf
-<input type="hidden" name="name" value="{{$name}}"><br>
-<input type="hidden"  name="email" value="{{$email}}"><br>
-<input type="hidden"  name="where" value="{{$where}}"><br>
 
-<button type="submit" class="btn btn-info">修正</button>
-</form> -->
 <form action="/send" method="post">
 @csrf
 <div class="form-group" style="margin-bottom: 0">
