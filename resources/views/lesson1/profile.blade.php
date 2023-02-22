@@ -12,14 +12,14 @@
 <div class="pull-left mb-2">
 <h3>Ethan Technology Japan</h3>
 </div>
-<h3> ご利用ありがとうございます。</h3>
+<h5> ご利用ありがとうございます。</h5>
   <br>
 
-  <h4> メールを送信しました。 </h4>
-  <h5> メールボックスをご確認の上、再度お問い合わせ頂きますようお願い申し上げます </h5>
-
+  <p> メールを送信しました。 </p><br>
+  <p> メールボックスをご確認の上、再度お問い合わせ頂きますようお願い申し上げます </p>
+<div>
   <button href="back" class="btn btn-primary">戻る</button>
-
+</div>
 
 </form>
 </div>
