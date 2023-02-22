@@ -23,10 +23,15 @@ class MailController extends Controller
     $email = $request->email;
     $where = $request->where;
 
-    
-
+    if($request->input('back') == 'back'){
+        return redirect('home')
+                    ->withInput();
+    } else{
         Mail::send(new TestMail($name, $email,$where));
         return view('lesson1/profile');
+    }
+
+        
        
          }
 

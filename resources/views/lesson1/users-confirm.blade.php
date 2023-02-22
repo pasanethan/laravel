@@ -17,7 +17,14 @@
 </div>
 </div>
 </div>
+<!-- <form action="edit" method="post">
+@csrf
+<input type="hidden" name="name" value="{{$name}}"><br>
+<input type="hidden"  name="email" value="{{$email}}"><br>
+<input type="hidden"  name="where" value="{{$where}}"><br>
 
+<button type="submit" class="btn btn-info">修正</button>
+</form> -->
 <form action="/send" method="post">
 @csrf
 <div class="form-group" style="margin-bottom: 0">
@@ -34,16 +41,10 @@
 <label for="where">都道府県  :  {{$where}}</label>
 <input type="hidden"  name="where" value="{{$where}}"><br>
 </div>
-
-<div class="form-group" style="margin-bottom: 0">
-
+<button type="submit"  class="btn btn-info" name='back' value="back">修正する</button>
 <button type="submit" class="btn btn-primary">送信</button>
-
 </form>
 
-</div>
 
-</div>
-</form>
 </body>
 </html>

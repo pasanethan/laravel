@@ -24,15 +24,15 @@
 @csrf
 
 <label for="name">名前 :</label>
-<input type="text"  name="name" value="{{ old('name') }}"><br>
+<input type="text"  name="name" value="{{$name}}"><br>
 <span style="color:red">@error('name'){{$message}}@enderror</span><br>
 
 <label for="email">メールアドレス :</label>
-<input type="text"  name="email" value="{{ old('email') }}"><br>
+<input type="text"  name="email" value="{{$email}}"><br>
 <span style="color:red">@error('email'){{$message}}@enderror</span><br>
 
 <label for="where">都道府県  :</label>
-<input type="text"  name="where" value="{{ old('where') }}"><br>
+<input type="text"  name="where" value="{{$where}}"><br>
 <span style="color:red">@error('where'){{$message}}@enderror</span><br>
 
 <button type="submit" class="btn btn-primary">確認</button>
