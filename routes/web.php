@@ -53,7 +53,7 @@ Route::view("lesson1/back", "lesson1/users");
 
 Route::resource('companies', CompanyCRUDController::class);
 //Route::get('/mail/send', 'MailController@send');
-Route::post('/mail/send', [MailController::class, 'send']);
+Route::post('/send', [MailController::class, 'send']);
 Route::post('again', [MailController::class, 'again']);
 
 
