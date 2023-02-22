@@ -38,7 +38,7 @@
 <div class="form-group" style="margin-bottom: 0">
 <button type="submit" class="btn btn-primary">確認</button>
 </form>
-<button class="btn btn-primary" name='back' value="back" href="again">再入力</button>
+<button class="btn btn-primary" name='back' value="again" href="again">再入力</button>
 </div>
 
 </div>
