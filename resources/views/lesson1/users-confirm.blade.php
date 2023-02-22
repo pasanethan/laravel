@@ -21,17 +21,17 @@
 <form action="/mail/send" method="post">
 @csrf
 <div class="form-group" style="margin-bottom: 0">
-<label for="name">名前 : </label>{{$name}}
+<label for="name">名前 : {{$name}}</label>
 <input type="hidden" name="name" value="{{$name}}"><br>
 </div>
 
 <div class="form-group" style="margin-bottom: 0">
-<label for="email">メールアドレス : </label>{{$email}}
+<label for="email">メールアドレス : {{$email}}</label>
 <input type="hidden"  name="email" value="{{$email}}"><br>
 </div>
 
 <div class="form-group">
-<label for="where">都道府県  : </label>{{$where}}
+<label for="where">都道府県  :  {{$where}}</label>
 <input type="hidden"  name="where" value="{{$where}}"><br>
 </div>
 
