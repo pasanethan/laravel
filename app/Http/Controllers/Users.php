@@ -35,39 +35,4 @@ class Users extends Controller
 }
 
 
-
-  //   function editRequest(Request $req)
-  //    {
-  //     $data = [
-  //       'name' => $req->input('name'),
-  //       'email' => $req->input('email'),
-  //       'where' =>$req->input('where')
-  //   ];
-   
-  //     //return $req->input();
-  //    return view('lesson1/edit', $data);
-  // }
-
-// function outRequest(Request $req)
-//    {
-//     $data = [
-//       'name' => $req->input('name')];
-// $req->session()->put('name', $data['name']);
-// //var_dump($data);
-// return view('lesson1/profile');
-// }
-
-// function clearRequest()
-// {
-// //   //session()->pull('name');
-// //   return view('users');
-// // }
-
-//    session()->pull('name');
-//   return view('lesson1/users');
-
-
-// }
-
-
 }
