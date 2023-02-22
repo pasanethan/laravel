@@ -36,14 +36,11 @@
 </div>
 
 <div class="form-group" style="margin-bottom: 0">
-<button type="submit" class="btn btn-info" name='back' value="back">修正する</button>
+
 <button type="submit" class="btn btn-primary">送信</button>
 
-
-
-
 </form>
-<!-- <a class="btn btn-info" name='again' value="again" href="again" method="post">修正する</a> -->
+
 </div>
 
 </div>

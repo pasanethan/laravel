@@ -23,6 +23,8 @@ class MailController extends Controller
     $email = $request->email;
     $where = $request->where;
 
+    
+
         Mail::send(new TestMail($name, $email,$where));
         return view('lesson1/profile');
        

@@ -40,13 +40,8 @@ Route::view("home", "lesson1/users");
 //  Route::view("lesson1/profile", "profile");
 Route::view("back", "lesson1/users");
 Route::view("lesson1/back", "lesson1/users");
+// Route::POST("edit", [Users::class, 'editRequest']);
  
-//  Route::post('logout', function () {
-//   if(session()->has('name'))
-//   {
-//   session()->pull('name');
-//     return redirect('users');
-//   }
 
 
 //  });

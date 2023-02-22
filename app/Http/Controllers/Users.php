@@ -34,6 +34,7 @@ class Users extends Controller
    return view('lesson1/users-confirm', $data);
 }
 
+
 // function outRequest(Request $req)
 //    {
 //     $data = [
