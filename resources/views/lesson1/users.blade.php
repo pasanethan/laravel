@@ -11,6 +11,9 @@
 <div class="col-lg-12 margin-tb">
 <div class="pull-left mb-2">
 <h3>Ethan Technology Japan</h3>
+<a href=public/home> 課題1 </a>
+<a href=companies> 課題2 </a>
+<a href=companies> 課題3 </a>
 </div>
 <div class="pull-right">
 <p style="margin-bottom:20px"> 下記の項目を入力ください。</p>
