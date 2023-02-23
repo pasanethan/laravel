@@ -113,7 +113,8 @@ return redirect()->route('companies.index')
 }
 
 
-public function mail() { 
+public function mail(Request $request, $id)
+ { 
 
   if(isset($_POST['sendall']))
   {  
@@ -121,18 +122,18 @@ public function mail() {
   if(!empty($this->request->getPost('checkbox_value')))
   {
   $checked = $this->request->getPost('checkbox_value');
-  $detail = new DetailModel();
+
+  $company = Company::find($id);
+$company->name = $request->name;
+$company->email = $request->email;
+$company->address = $request->address;
+
   foreach( $checked as $row){
       
-      $data = $detail->find($row);
-  
-      $email = \Config\Services::email();
-      $email->setTo($data['email']);
-      $email->setFrom('pasan@netwest.site', 'Ethan-Tech');
-      
-      $email->setSubject('Ethan Technology Japan株式会社からのご案内');
-      $email->setMessage('ご登録の情報は下記の通りになります。'.'<br>'.'名前：'.$data['name'].'<br>'.'都道府県 ：'.$data['where']);
-       if ($email->send()) 
+ //     $data = $detail->find($row);
+      $company = Company::find($id);
+     
+       if (Mail::send(new TestMail($name, $email,$where))) 
       {
           //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
       } 
