@@ -33,10 +33,10 @@
 <th width="150px">変更一覧</th>
 </tr>
 
-@foreach ($companies as $company)
+
 <form action="/mail" method="Post">
     @csrf
-
+@foreach ($companies as $company)
 <tr>
 <td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[{{ $company->id }}]"></td>
 <td>{{ $company->name }}</td>
