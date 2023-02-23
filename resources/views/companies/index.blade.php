@@ -56,7 +56,7 @@
 </form>
 <script>
 function DosendMail() {
-    document.getElementById("details").value = document.getElementById("checkbox_value[]").value;
+    document.getElementById("details").value = document.getElementByName("checkbox_value[]").value;
   return true;
 }
 </script>
