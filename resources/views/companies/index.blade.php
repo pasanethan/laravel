@@ -35,7 +35,7 @@
 </tr>
 @foreach ($companies as $company)
 <tr>
-<td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[{{ $company->id }}]"></td>
+<td><input type="checkbox" id="{{ $company->id }}"  value="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
