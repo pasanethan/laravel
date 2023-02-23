@@ -57,7 +57,7 @@
 
 
 </table>
-<button type="submit" name="sendallbutton">ALL</button>
+<button type="submit" name="sendallbutton">SENDALL</button>
 </form>
 {!! $companies->links() !!}
 </body>
