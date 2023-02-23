@@ -23,7 +23,8 @@
 <p>{{ $message }}</p>
 </div>
 @endif
-
+<form action="/mail" method="Post">
+    @csrf
 <table class="table table-bordered">
 <tr>
 <th></th>
@@ -32,10 +33,6 @@
 <th>都道府県 </th>
 <th width="150px">変更一覧</th>
 </tr>
-
-
-<form action="/mail" method="Post">
-    @csrf
 @foreach ($companies as $company)
 <tr>
 <td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[{{ $company->id }}]"></td>
@@ -51,11 +48,7 @@
 </form>
 </td>
 </tr>
-
-
 @endforeach
-
-
 </table>
 <button type="submit" name="sendallbutton">SENDALL</button>
 </form>
