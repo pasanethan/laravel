@@ -40,12 +40,12 @@
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<form action="{{ route('companies.destroy',$company->id) }}" method="Post">
+<!--form action="{{ route('companies.destroy',$company->id) }}" method="Post">
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">変更</a>
 @csrf
 @method('DELETE')
 <button type="submit" class="btn btn-danger">削除</button>
-</form>
+</form-->
 </td>
 </tr>
 @endforeach
