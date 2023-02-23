@@ -16,7 +16,7 @@
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
 
-<button type="submit" class="btn btn-danger" name="sendall">ALL</button>
+<button type="submit" class="btn btn-danger" name="sendall" href="/sendall">ALL</button>
 
 </div>
 </div>
