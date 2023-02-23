@@ -15,9 +15,9 @@
 </div>
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
-<form action="{{ route('companies.mail',$company->id) }}" method="Post">
-<button type="submit" class="btn btn-danger" name="sendall">削除</button>
-</form>
+<form action="/sendall" method="Post">
+<button type="submit" class="btn btn-danger" name="sendall">ALL</button>
+
 </div>
 </div>
 </div>
@@ -46,6 +46,7 @@
 @csrf
 @method('DELETE')
 <button type="submit" class="btn btn-danger">削除</button>
+</form>
 </form>
 </td>
 </tr>
