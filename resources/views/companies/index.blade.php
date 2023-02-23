@@ -34,9 +34,9 @@
 </tr>
 
 @foreach ($companies as $company)
-<form action="{{ route('mail',$company->id) }}" method="Post">
-<button type="submit" class="btn btn-danger" name="sendallbutton">ALL</button>
-</form>
+<form action="/mail" method="Post">
+    @csrf
+
 <tr>
 <td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
@@ -57,7 +57,8 @@
 
 
 </table>
-
+<button type="submit" class="btn btn-danger" name="sendallbutton">ALL</button>
+</form>
 {!! $companies->links() !!}
 </body>
 </html>
