@@ -39,5 +39,5 @@ Route::POST("lesson1/confirm", [Users::class, 'passRequest']);
 Route::view("back", "lesson1/users");
 Route::resource('companies', CompanyCRUDController::class);
 Route::post('/send', [MailController::class, 'send']);
-Route::post('/sendall', [CompanyCRUDController::class, 'mail']);
+Route::post('companies.mail', [CompanyCRUDController::class, 'mail']);
 
