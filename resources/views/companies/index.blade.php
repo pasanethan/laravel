@@ -23,8 +23,7 @@
 <p>{{ $message }}</p>
 </div>
 @endif
-<form action="/mail" method="Post">
-    @csrf
+
 <table class="table table-bordered">
 <tr>
 <th></th>
@@ -35,23 +34,32 @@
 </tr>
 @foreach ($companies as $company)
 <tr>
-<td><input type="checkbox" id="{{ $company->id }}"  value="{{ $company->id }}" name="checkbox_value[]"></td>
+<td><input type="checkbox" value="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<!--form action="{{ route('companies.destroy',$company->id) }}" method="Post">
+<form action="{{ route('companies.destroy',$company->id) }}" method="Post">
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">変更</a>
 @csrf
 @method('DELETE')
 <button type="submit" class="btn btn-danger">削除</button>
-</form-->
+</form>
 </td>
 </tr>
 @endforeach
 </table>
+<form name="mailform" action="/mail" method="Post" onsubmit="DosendMail();">
+    @csrf
+<input name="details"  type="hidden" value="">    
 <button type="submit" name="sendallbutton">SENDALL</button>
 </form>
+<script>
+function DosendMail() {
+    document.getElementById("details").value = document.getElementById("checkbox_value[]").value;
+  return true;
+}
+</script>
 {!! $companies->links() !!}
 </body>
 </html>
