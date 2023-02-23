@@ -34,7 +34,7 @@
 </tr>
 
 @foreach ($companies as $company)
-<form action={{ route('mail',$company->id) }}" method="Post">
+<form action="{{ route('mail',$company->id) }}" method="Post">
 <button type="submit" class="btn btn-danger" name="sendallbutton">ALL</button>
 </form>
 <tr>
