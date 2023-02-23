@@ -49,7 +49,7 @@
 </tr>
 @endforeach
 </table>
-<form name="mailform" action="/mail" method="Post" onsubmit="DosendMail();">
+<form name="mailform" action="/mail" method="Post" onsubmit="DosendMail()">
     @csrf
 <input name="details"  type="hidden" value="">    
 <button type="submit" name="sendallbutton">SENDALL</button>
