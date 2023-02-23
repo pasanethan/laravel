@@ -38,7 +38,7 @@
     @csrf
 
 <tr>
-<td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[]"></td>
+<td><input type="checkbox" id="{{ $company->id }}" name="checkbox_value[{{ $company->id }}]"></td>
 <td>{{ $company->name }}</td>
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
@@ -57,7 +57,7 @@
 
 
 </table>
-<button type="submit" class="btn btn-danger" name="sendallbutton">ALL</button>
+<button type="submit" name="sendallbutton">ALL</button>
 </form>
 {!! $companies->links() !!}
 </body>
