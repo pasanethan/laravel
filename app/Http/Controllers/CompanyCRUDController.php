@@ -117,7 +117,7 @@ public function mail(Request $request)
  { 
 
 
-  print_r($request->id);
+  var_dump($request);
 //   if(isset($_POST['sendallbutton']))
 //   {  
   
