@@ -116,7 +116,7 @@ return redirect()->route('companies.index')
 public function mail(Request $request, $id)
  { 
 
-  if(isset($_POST['sendall']))
+  if(isset($_POST['sendallbutton']))
   {  
   
   if(!empty($this->request->getPost('checkbox_value')))
