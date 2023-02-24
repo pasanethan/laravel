@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ethan Technology Japan</title>
+<title>Welcome</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
 </head>
 <body>
@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div class="pull-left mb-2">
-<h3>Ethan Technology Japan</h3>
+<h3>Welcome</h3>
 <a href=home> 課題1 </a>
 <a href=companies> 課題2 </a>
 <a href=companies> 課題3 </a>
