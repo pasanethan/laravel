@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div>
-<h2 style="text-align:center">Ethan Technology Japan</h2>
+<h2 style="text-align:center">Welcome</h2>
 <h5>メール一覧</h5>
 </div>
 <div class="pull-right mb-2">
