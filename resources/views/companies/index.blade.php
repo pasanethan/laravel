@@ -52,7 +52,7 @@
 </table>
 <form name="mailform" action="/mail" method="Post">
     @csrf
-<input name="details"  type="hidden" value="">    
+<input name="details"  type="hidden" value="">
 
 </form>
 <button  onlick="DosendMail()" type="submit" name="sendallbutton">SENDALL</button>
