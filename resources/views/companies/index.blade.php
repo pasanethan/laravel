@@ -59,7 +59,7 @@ function DosendMail() {
     document.getElementById("details").value = document.getElementByName("checkbox_value[]").value;
   return true;
 }
-</script>
+</script> 
 {!! $companies->links() !!}
 </body>
 </html>
