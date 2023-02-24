@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div class="pull-left mb-2">
-<h3>Ethan Technology Japan</h3>
+<h3>Thank you</h3>
 </div>
 <h5> ご利用ありがとうございます。</h5>
   <br>
