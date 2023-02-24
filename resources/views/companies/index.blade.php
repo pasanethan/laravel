@@ -49,17 +49,7 @@
 </tr>
 @endforeach
 </table>
-<form name="mailform" action="/mail" method="Post" onsubmit="DosendMail()">
-    @csrf
-<input name="details"  type="hidden" value="">    
-<button type="submit" name="sendallbutton">SENDALL</button>
-</form>
-<script>
-function DosendMail() {
-    document.getElementById("details").value = document.getElementByName("checkbox_value[]").value;
-  return true;
-}
-</script> 
+
 {!! $companies->links() !!}
 </body>
 </html>
