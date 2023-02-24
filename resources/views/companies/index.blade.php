@@ -15,7 +15,7 @@
 </div>
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
-<a class="btn btn-success" href="{{ route('') }}"> 送信</a>
+<a class="btn btn-success"> 送信</a>
 </div>
 </div>
 </div>
