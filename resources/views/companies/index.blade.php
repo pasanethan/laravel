@@ -44,13 +44,13 @@
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
-<a class="btn btn-info" href="{{ route('company-destroy',$company->id) }}">DEL</a>
+<a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">変更</a>
+<a class="btn btn-danger" href="{{ route('company-destroy',$company->id) }}">削除</a>
 </td>
 </tr>
 @endforeach
 @csrf
-<button type="submit" class="btn btn-danger" name="sendallbutton">Send All</button>
+<button type="submit" class="btn btn-info" name="sendallbutton">送信</button>
 
 </table>
 </form>
