@@ -18,7 +18,6 @@
 </div>
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
-<a class="btn btn-success"> 送信</a>
 </div>
 </div>
 </div>
@@ -45,9 +44,10 @@
 <td>
 <form action="companies" method="Post">
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
+@method('DELETE')
 <a class="btn btn-info" href="{{ route('companies.destroy',$company->id) }}">DEL</a>
 @csrf
-<!-- @method('DELETE') -->
+
 
 
 </td>
