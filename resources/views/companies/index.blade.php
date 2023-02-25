@@ -11,6 +11,9 @@
 <div class="col-lg-12 margin-tb">
 <div>
 <h2 style="text-align:center">Welcome</h2>
+<a href=home> 課題1 </a>
+<a href=companies> 課題2 </a>
+<a href=companies> 課題3 </a>
 <h5>メール一覧</h5>
 </div>
 <div class="pull-right mb-2">
