@@ -45,16 +45,11 @@
 <td>{{ $company->address }}</td>
 <td>
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
-@method('DELETE')
-<a class="btn btn-info" href="{{ route('companies.destroy',$company->id) }}">DEL</a>
-@csrf
-
-
-
+<a class="btn btn-info" href="{{ route('company-destroy',$company->id) }}">DEL</a>
 </td>
 </tr>
 @endforeach
-
+@csrf
 <button type="submit" class="btn btn-danger" name="sendallbutton">Send All</button>
 
 </table>

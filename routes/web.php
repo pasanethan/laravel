@@ -32,13 +32,15 @@ use App\Http\Controllers\MailController;
 //     //
 // });
 
-Route::view("home", "lesson1/users");
+Route::view("/", "lesson1/users");
 Route::POST("confirm", [Users::class, 'passRequest']);
 Route::POST("edit/confirm", [Users::class, 'passRequest']);
 Route::POST("lesson1/confirm", [Users::class, 'passRequest']);
 Route::view("back", "lesson1/users");
 Route::resource('companies', CompanyCRUDController::class);
+Route::get('companies/company-destroy/{id}',[CompanyCRUDController::class, 'destroy'])->name('company-destroy');
+
 Route::post('/send', [MailController::class, 'send']);
 // //Route::post('companies/mail', [CompanyCRUDController::class, 'mail']);
-Route::post('/mail', [CompanyCRUDController::class, 'mail']);
+Route::post('/companies/mail', [CompanyCRUDController::class, 'mail']);
 
