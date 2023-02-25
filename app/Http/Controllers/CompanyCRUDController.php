@@ -117,40 +117,39 @@ public function mail(Request $request)
  { 
 
 
-  var_dump($request);
-//   if(isset($_POST['sendallbutton']))
-//   {  
+  if(isset($_POST['sendallbutton']))
+  {  
   
-//   if(!empty($this->request->getPost('checkbox_value')))
-//   {
-//   $checked = $this->request->getPost('checkbox_value');
+  if(!empty($this->request->getPost('checkbox_value')))
+  {
+  $checked = $this->request->getPost('checkbox_value');
 
-//   $company = Company::find($id);
-// $company->name = $request->name;
-// $company->email = $request->email;
-// $company->address = $request->address;
+  $company = Company::find($id);
+$company->name = $request->name;
+$company->email = $request->email;
+$company->address = $request->address;
 
-//   foreach( $checked as $row){
+  foreach( $checked as $row){
       
-//  //     $data = $detail->find($row);
-//       $company = Company::find($id);
+
+      $company = Company::find($id);
      
-//        if (Mail::send(new TestMail($name, $email,$where))) 
-//       {
-//           //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
-//       } 
-//       else 
-//      {
-//      $data = $email->printDebugger(['headers']);
-//          print_r($data);
-//     }
-//   }
-//   return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
-//   }
-//   else{
-//   return redirect()->back()->with('status','対象のメールアドレスをチェックしてください。');
-//   }
-//   }
+       if (Mail::send(new TestMail($name, $email,$where))) 
+      {
+          //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
+      } 
+      else 
+     {
+     $data = $email->printDebugger(['headers']);
+         print_r($data);
+    }
+  }
+  return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
+  }
+  else{
+  return redirect()->back()->with('status','対象のメールアドレスをチェックしてください。');
+  }
+  }
   
   }
 
