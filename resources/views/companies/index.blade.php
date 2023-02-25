@@ -27,6 +27,7 @@
 </div>
 @endif
 
+<form action="companies/mail" method="Post">
 <table class="table table-bordered">
 <tr>
 <th></th>
@@ -36,7 +37,7 @@
 <th width="150px">変更一覧</th>
 </tr>
 @foreach ($companies as $company)
-<form action="companies/mail" method="Post">
+
 <tr>
 <td><input type="checkbox" value="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
@@ -53,9 +54,10 @@
 </td>
 </tr>
 @endforeach
-</table>
+
 <button type="submit" class="btn btn-danger" name="sendallbutton">Send All</button>
 </form>
+</table>
 {!! $companies->links() !!}
 </body>
 </html>
