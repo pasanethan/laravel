@@ -139,8 +139,9 @@ class CompanyCRUDController extends Controller
                         print_r($data);
                     }
                 }
-                return redirect()->back()->with('status', '対象のメールアドレスへメールをお送り致しました。');
-         
+           //     return redirect()->back()->with('status', '対象のメールアドレスへメールをお送り致しました。');
+           return redirect()->route('companies.index')
+           ->with('success', '対象のメールアドレスへメールをお送り致しました。');
         } else {
   //          return redirect()->back()->with('status', '対象のメールアドレスをチェックしてください。');
   return redirect()->route('companies.index')
