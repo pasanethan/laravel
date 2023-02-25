@@ -100,60 +100,44 @@ return redirect()->route('companies.index')
 ->with('success','ご利用ありがとうございます。編集致しました。');
 }
 /**
-* Remove the specified resource from storage.
-*
-* @param  \App\Company  $company
-* @return \Illuminate\Http\Response
-*/
-public function destroy(Company $company)
-{
-$company->delete();
-return redirect()->route('companies.index')
-->with('success','ご利用ありがとうございます。削除致しました。');
-}
-
-
-public function mail(Request $request)
- { 
-
-
-  if(isset($_POST['sendallbutton']))
-  {  
-  
-  if(!empty($this->request->getPost('checkbox_value')))
-  {
-  $checked = $this->request->getPost('checkbox_value');
-
-  $company = Company::find($id);
-$company->name = $request->name;
-$company->email = $request->email;
-$company->address = $request->address;
-
-  foreach( $checked as $row){
-      
-
-      $company = Company::find($id);
-     
-       if (Mail::send(new TestMail($name, $email,$where))) 
-      {
-          //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
-      } 
-      else 
-     {
-     $data = $email->printDebugger(['headers']);
-         print_r($data);
+ * Remove the specified resource from storage.
+ *
+ * @param  \App\Company  $company
+ * @return \Illuminate\Http\Response
+ */
+    public function destroy($id)
+    {
+        $company = Company::find($id);
+        $company->delete();
+        return redirect()->route('companies.index')
+            ->with('success', 'ご利用ありがとうございます。削除致しました。');
     }
-  }
-  return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
-  }
-  else{
-  return redirect()->back()->with('status','対象のメールアドレスをチェックしてください。');
-  }
-  }
-  
-  }
 
+    public function mail(Request $request)
+    {
+     
+        if (is_array($request->checkbox_value) && count($request->checkbox_value) > 0) {
+    
+              $checked = $request->checkbox_value;
+              $companies = Company::whereIn("id", $checked)->get();
+             
+                foreach ($companies as $row) {
 
+                    $name = $row->name;
+                    $email = $row->email;
+                    $where = $row->email;
 
-
+                    if (Mail::send(new TestMail($name, $email, $where))) {
+                        //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
+                    } else {
+                        $data = $email->printDebugger(['headers']);
+                        print_r($data);
+                    }
+                }
+                return redirect()->back()->with('status', '対象のメールアドレスへメールをお送り致しました。');
+         
+        } else {
+            return redirect()->back()->with('status', '対象のメールアドレスをチェックしてください。');
+        }
+    }
 }
