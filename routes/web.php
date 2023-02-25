@@ -32,7 +32,7 @@ use App\Http\Controllers\MailController;
 //     //
 // });
 
-Route::view("/", "lesson1/users");
+Route::view("/home", "lesson1/users");
 Route::POST("confirm", [Users::class, 'passRequest']);
 Route::POST("edit/confirm", [Users::class, 'passRequest']);
 Route::POST("lesson1/confirm", [Users::class, 'passRequest']);
