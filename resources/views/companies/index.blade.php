@@ -56,8 +56,9 @@
 @endforeach
 
 <button type="submit" class="btn btn-danger" name="sendallbutton">Send All</button>
-</form>
+
 </table>
+</form>
 {!! $companies->links() !!}
 </body>
 </html>
