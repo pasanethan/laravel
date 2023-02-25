@@ -43,16 +43,19 @@
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<form action="{{ route('companies.destroy',$company->id) }}" method="Post">
-<a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">変更</a>
+<form action="companies" method="Post">
+<a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
+<a class="btn btn-info" href="{{ route('companies.destroy',$company->id) }}">DEL</a>
 @csrf
-@method('DELETE')
-<button type="submit" class="btn btn-danger">削除</button>
-</form>
+<!-- @method('DELETE') -->
+
+
 </td>
 </tr>
 @endforeach
 </table>
+<button type="submit" class="btn btn-danger">Send All</button>
+</form>
 {!! $companies->links() !!}
 </body>
 </html>
