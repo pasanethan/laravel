@@ -36,13 +36,13 @@
 <th width="150px">変更一覧</th>
 </tr>
 @foreach ($companies as $company)
+<form action="companies/mail" method="Post">
 <tr>
 <td><input type="checkbox" value="{{ $company->id }}" name="checkbox_value[]"></td>
 <td>{{ $company->name }}</td>
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<form action="companies, $company->id" method="Post">
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
 @method('DELETE')
 <a class="btn btn-info" href="{{ route('companies.destroy',$company->id) }}">DEL</a>
