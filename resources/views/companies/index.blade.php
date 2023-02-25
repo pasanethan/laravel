@@ -42,7 +42,7 @@
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<form action="companies" method="Post">
+<form action="companies, $company->id" method="Post">
 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">CHANGE</a>
 @method('DELETE')
 <a class="btn btn-info" href="{{ route('companies.destroy',$company->id) }}">DEL</a>
