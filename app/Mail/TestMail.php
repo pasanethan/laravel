@@ -20,7 +20,7 @@ class TestMail extends Mailable
     {
         $this->name = $name;
         $this->email = $email;
-        $this->where = $where;
+        $this->where = $address;
     }
 
     /**
@@ -35,8 +35,8 @@ class TestMail extends Mailable
             ->view('lesson1.mail')
             ->with([
                 'name' => $this->name,
-                'email' => $this->name,
-                'where'=> $this->where,
+                'email' => $this->email,
+                'where'=> $this->address,
             ]);
     }
 }
