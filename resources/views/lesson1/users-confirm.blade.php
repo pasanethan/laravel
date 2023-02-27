@@ -31,8 +31,8 @@
 </div>
 
 <div class="form-group">
-<label for="where">都道府県  :  {{$where}}</label>
-<input type="hidden"  name="where" value="{{$where}}"><br>
+<label for="address">都道府県  :  {{$address}}</label>
+<input type="hidden"  name="address" value="{{$address}}"><br>
 </div>
 <button type="submit"  class="btn btn-info" name='back' value="back">修正する</button>
 <button type="submit" class="btn btn-primary">送信</button>

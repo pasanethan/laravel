@@ -130,9 +130,9 @@ class CompanyCRUDController extends Controller
 
                     $name = $row->name;
                     $email = $row->email;
-                    $where = $row->email;
+                    $address = $row->address;
 
-                    if (Mail::send(new TestMail($name, $email, $where))) {
+                    if (Mail::send(new TestMail($name, $email, $address))) {
                         //return redirect()->back()->with('status','対象のメールアドレスへメールをお送り致しました。');
                     } else {
                         $data = $email->printDebugger(['headers']);

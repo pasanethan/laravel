@@ -4,7 +4,7 @@
 <br>
 名前：{{ $name }}
 <br>
-都道府県： {{ $where }}
+都道府県： {{ $address }}
 <br>
 <br>
 

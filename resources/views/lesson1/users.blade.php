@@ -31,9 +31,9 @@
 <input type="text"  name="email" value="{{ old('email') }}"><br>
 <span style="color:red">@error('email'){{$message}}@enderror</span><br>
 
-<label for="where">都道府県  :</label>
-<input type="text"  name="where" value="{{ old('where') }}"><br>
-<span style="color:red">@error('where'){{$message}}@enderror</span><br>
+<label for="address">都道府県  :</label>
+<input type="text"  name="address" value="{{ old('address') }}"><br>
+<span style="color:red">@error('address'){{$message}}@enderror</span><br>
 
 <button type="submit" class="btn btn-primary">確認</button>
 
