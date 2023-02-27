@@ -17,17 +17,17 @@ class MailController extends Controller
 //   // データ格納
 //   $data['name'] = $request->name;
 //   $data['email'] = $request->email;
-//   $data['where'] = $request->where;
+//   $data['address'] = $request->address;
 
     $name = $request->name;
     $email = $request->email;
-    $where = $request->where;
+    $address = $request->address;
 
     if($request->input('back') == 'back'){
         return redirect('home')
                     ->withInput();
     } else{
-        Mail::send(new TestMail($name, $email,$where));
+        Mail::send(new TestMail($name, $email,$address));
         return view('lesson1/profile');
     }
 
@@ -44,14 +44,14 @@ class MailController extends Controller
 //   // データ格納
 //   $data['name'] = $request->name;
 //   $data['email'] = $request->email;
-//   $data['where'] = $request->where;
+//   $data['address'] = $request->address;
 
     $name = $request->name;
     $email = $request->email;
-    $where = $request->where;
+    $address = $request->address;
 
 
-        Mail::send(new TestMail($name, $email,$where));
+        Mail::send(new TestMail($name, $email,$address));
         return view('lesson1/profile');
     }
 
