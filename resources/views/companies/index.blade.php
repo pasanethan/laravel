@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div>
-<h2 style="text-align:center">ETJ</h2>
+<h2>ETJ</h2>
 <a href=home> 課題1 </a>
 <a href=companies2> 課題2 </a>
 <a href=companies> 課題3 </a>
