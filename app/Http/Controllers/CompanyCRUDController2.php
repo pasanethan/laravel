@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 use App\Mail\TestMail;
-class CompanyCRUDController extends Controller
+class CompanyCRUDController2 extends Controller
 {
 /**
  * Display a listing of the resource.
