@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div class="pull-left mb-2">
-<h3>ETJ/h3>
+<h3>ETJ</h3>
 </div>
 <div class="pull-right">
 <p style="margin-bottom:20px"> 下記の項目をご確認の上、送信してください。</p>
