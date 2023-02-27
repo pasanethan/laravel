@@ -31,7 +31,7 @@ class TestMail extends Mailable
     public function build()
     {
         return $this->to($this->email)
-            ->subject('株式会社からのご案内')
+            ->subject('ETJ株式会社からのご案内')
             ->view('lesson1.mail')
             ->with([
                 'name' => $this->name,
