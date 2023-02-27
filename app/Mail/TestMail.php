@@ -16,11 +16,11 @@ class TestMail extends Mailable
      *
      * @return void
      */
-    public function __construct($name, $email,$where)
+    public function __construct($name, $email,$address)
     {
         $this->name = $name;
         $this->email = $email;
-        $this->where = $address;
+        $this->address = $address;
     }
 
     /**
@@ -36,7 +36,7 @@ class TestMail extends Mailable
             ->with([
                 'name' => $this->name,
                 'email' => $this->email,
-                'where'=> $this->address,
+                'address'=> $this->address,
             ]);
     }
 }

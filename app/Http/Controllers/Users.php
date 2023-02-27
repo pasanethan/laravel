@@ -11,13 +11,13 @@ class Users extends Controller
     $data = [
       'name' => $req->input('name'),
       'email' => $req->input('email'),
-      'where' =>$req->input('where')
+      'address' =>$req->input('address')
   ];
 
     $req->validate([
     'name' => 'required|max:7|min:2',
     'email' => 'required|email',
-    'where' => 'required|max:7|min:2'
+    'address' => 'required|max:7|min:2'
 ],
 [
     'required' => ':attributeはご入力必須です。',
@@ -28,7 +28,7 @@ class Users extends Controller
 [
     'name' => '名前',
     'email' => 'メールアドレス',
-    'where' => '都道府県',
+    'address' => '都道府県',
 ]);
     //return $req->input();
    return view('lesson1/users-confirm', $data);
