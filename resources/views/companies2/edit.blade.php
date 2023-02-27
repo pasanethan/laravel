@@ -13,7 +13,7 @@
 <h5>編集画面</h2>
 </div>
 <div class="pull-right">
-<a class="btn btn-primary" href="{{ route('companies.index') }}"> 戻る</a>
+<a class="btn btn-primary" href="{{ route('companies2.index') }}"> 戻る</a>
 </div>
 </div>
 </div>
@@ -22,7 +22,7 @@
 {{ session('status') }}
 </div>
 @endif
-<form action="{{ route('companies.update',$company->id) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('companies2.update',$company->id) }}" method="POST" enctype="multipart/form-data">
 @csrf
 @method('PUT')
 <div class="row">

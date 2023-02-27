@@ -11,10 +11,13 @@
 <div class="col-lg-12 margin-tb">
 <div>
 <h2 style="text-align:center">Welcome</h2>
+<a href=home> 課題1 </a>
+<a href=companies2> 課題2 </a>
+<a href=companies> 課題3 </a>
 <h5>メール一覧</h5>
 </div>
 <div class="pull-right mb-2">
-<a class="btn btn-success" href="{{ route('companies.create') }}"> 登録</a>
+<a class="btn btn-success" href="{{ route('companies2.create') }}"> 登録</a>
 <a class="btn btn-success"> 送信</a>
 </div>
 </div>
@@ -40,8 +43,8 @@
 <td>{{ $company->email }}</td>
 <td>{{ $company->address }}</td>
 <td>
-<form action="{{ route('companies.destroy',$company->id) }}" method="Post">
-<a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">変更</a>
+<form action="{{ route('companies2.destroy',$company->id) }}" method="Post">
+<a class="btn btn-primary" href="{{ route('companies2.edit',$company->id) }}">変更</a>
 @csrf
 @method('DELETE')
 <button type="submit" class="btn btn-danger">削除</button>

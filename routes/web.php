@@ -40,7 +40,10 @@ Route::view("back", "lesson1/users");
 Route::resource('companies', CompanyCRUDController::class);
 Route::get('companies/company-destroy/{id}',[CompanyCRUDController::class, 'destroy'])->name('company-destroy');
 
+Route::resource('companies2', CompanyCRUDController2::class);
+Route::get('companies2/company-destroy/{id}',[CompanyCRUDController2::class, 'destroy'])->name('company-destroy');
+
 Route::post('/send', [MailController::class, 'send']);
 // //Route::post('companies/mail', [CompanyCRUDController::class, 'mail']);
 Route::post('/companies/mail', [CompanyCRUDController::class, 'mail']);
-
+Route::post('/companies2/mail', [CompanyCRUDController::class, 'mail']);
