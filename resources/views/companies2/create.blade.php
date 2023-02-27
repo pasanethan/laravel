@@ -13,7 +13,7 @@
 <h2>メール一覧</h2>
 </div>
 <div class="pull-right">
-<a class="btn btn-primary" href="{{ route('companies.index') }}"> 戻る</a>
+<a class="btn btn-primary" href="{{ route('companies2.index') }}"> 戻る</a>
 </div>
 </div>
 </div>
